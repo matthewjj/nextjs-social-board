@@ -16,7 +16,22 @@
   }
 }
 
+@font-face {
+    font-family: 'QuanSlim';
+    src: local('QuanSlim'),
+        url('./fonts/QuanSlim-Regular.woff') format('woff'),
+        url('./fonts/QuanSlim-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'QuanSlim-Bold';
+    src: local('QuanSlim-Bold'),
+        url('./fonts/QuanSlim-Bold.woff') format('woff'),
+        url('./fonts/QuanSlim-Bold.woff2') format('woff2');
+}
+
 body {
+  font-family: "QuanSlim";
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -25,3 +40,4 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
