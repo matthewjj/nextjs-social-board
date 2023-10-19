@@ -12,11 +12,9 @@ export default async function Home() {
   return (
     <main>
 
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-4">
         
         {/* BANNER */}
-
-
 
         <div style={{backgroundImage: "linear-gradient(to right, #4880EC, #019CAD)"}} className="w-full rounded-md p-4 text-white">
           
@@ -28,13 +26,13 @@ export default async function Home() {
 
         {/* DYNAMIC CONTENT */}
 
-        <div className="w-full flex max-md:flex-col gap-2">
+        <div className="w-full flex max-md:flex-col gap-4">
           
           {/* LEFT */}
 
           <div className="max-md:w-full md:w-1/4 flex flex-col">
 
-            <div className="w-full bg-white rounded-md p-2">
+            <div className="w-full bg-white rounded-md p-6">
               <p className="font-bold">Newest Members</p>
               {users}
             </div>
@@ -43,9 +41,9 @@ export default async function Home() {
 
           {/* CENTER */}
 
-          <div className="max-md:w-full md:w-2/4 flex flex-col gap-2">
+          <div className="max-md:w-full md:w-2/4 flex flex-col gap-4">
 
-            <div className="w-full bg-white rounded-md p-2 flex">
+            <div className="w-full bg-white rounded-md p-6 flex">
 
               <div className="w-2/3">
                 
@@ -71,7 +69,7 @@ export default async function Home() {
 
           <div className="max-md:w-full md:w-1/4 flex flex-col">
             
-            <div className="w-full bg-white rounded-md p-2">
+            <div className="w-full bg-white rounded-md p-6">
               <p className="font-bold">Popular Groups</p>
 
               {groups}

@@ -3,6 +3,7 @@ import {dbConnect} from '../dbConnect';
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
+
 export async function getAllGroups(): Promise<any[]> {
 
   interface Group {
@@ -13,7 +14,7 @@ export async function getAllGroups(): Promise<any[]> {
   type GroupSummary = Pick<Group, "_id", "name">;
 
   try {
-
+    
     const feed = []
 
     // Connect the client to the server (optional starting in v4.7)
@@ -36,7 +37,21 @@ export async function getAllGroups(): Promise<any[]> {
       //console.log(reviews.countDocuments(query) +' rows found');
     }
 
-    for await (const doc of cursor) {
+    return render(cursor)
+
+  } finally {
+    // Ensures that the dbConnent() will close when you finish/error
+    await dbConnect().close();
+
+  }
+
+}
+
+export async function render(cursor) {
+
+  const feed = []
+
+  for await (const doc of cursor) {
       //console.log(doc);
 
       feed.push(
@@ -49,7 +64,7 @@ export async function getAllGroups(): Promise<any[]> {
                 <FontAwesomeIcon className="text-[10px]" icon={faUser} />
               </div>
               <div className="w-[66%]">
-                <div className="font-bold">{doc.name}</div>
+                <div className="font-bold">{doc.name} s</div>
               </div>
               <div className="w-[20%]">
                 <div >
@@ -61,12 +76,6 @@ export async function getAllGroups(): Promise<any[]> {
       );
     }
 
-    return feed
-
-  } finally {
-    // Ensures that the dbConnent() will close when you finish/error
-    await dbConnect().close();
-
-  }
+    return feed;
 
 }

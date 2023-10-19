@@ -16,7 +16,6 @@ export async function getAllPosts(): Promise<any[]> {
 
     const feed = []
 
-    console.log("ss");
     // Connect the client to the server (optional starting in v4.7)
     const database = dbConnect().db("sample_app");
     
@@ -75,13 +74,13 @@ export async function getAllPosts(): Promise<any[]> {
         <div className="w-full
           bg-white
           rounded-md
-          px-2"
+          p-6"
           key="{doc.name}">
 
-            <div className="flex items-center py-2">
+            <div className="flex items-center">
 
-              <div className="w-[14%]">
-                <FontAwesomeIcon className="text-[10px]" icon={faUser} />
+              <div className="w-[14%] text-[10px] ">
+                <FontAwesomeIcon icon={faUser} />
               </div>
 
               <div className="w-[86%] ">

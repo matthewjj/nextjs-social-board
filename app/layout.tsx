@@ -52,7 +52,8 @@ export default function RootLayout({
               text-xl
               gap-2
               items-center
-              py-2"
+              px-2
+              py-6"
             >
               <Link
                 className={"px-4 w-full " + (currentPage == 'feed' ? 'bg-blue-100' : '') + " text-center rounded p-1"}
@@ -78,7 +79,7 @@ export default function RootLayout({
             </aside>
 
             {/* CONTENT */}
-            <div className="max-md:w-full w-full bg-gray-200 p-4">
+            <div className="max-md:w-full w-full bg-gray-200 p-6">
 
               <div className="max-md:w-full md:max-w-5xl m-auto">
                 {children}

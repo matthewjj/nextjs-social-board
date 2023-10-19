@@ -16,13 +16,20 @@ export default function Nav({ children }) {
         <FontAwesomeIcon icon={faBars} />
       </div>
         
-      <div className="max-md:hidden md:w-3/6 flex gap-2 h-full items-center">
+      <div className="
+        max-md:hidden
+        md:w-2/6
+        flex
+        gap-2
+        h-full
+        items-center"
+      >
 
-        <div>
-          <img src="logo.png" className="w-2/3" />
+        <div className="">
+          <img src="logo.png" className="w-[90%]" />
         </div>
 
-        <div className="font-black">
+        <div className="font-black text-sm">
           SAMPLE PAGE
         </div>
 
@@ -51,7 +58,7 @@ export default function Nav({ children }) {
         />
       </div>
 
-      <div className="w-1/6 flex flex-row-reverse items-center py-2">
+      <div className="w-2/6 flex flex-row-reverse items-center py-2">
         <button className="float-right bg-[#00d2e0] h-full px-3 rounded">Login</button>
       </div>
 
